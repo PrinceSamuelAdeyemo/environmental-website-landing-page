@@ -51,7 +51,7 @@ nav{
 
 .coverh1{
     font-family: "Inter", sans-serif;
-    font-size: 24rem;
+    font-size: 32px;
 }
 
 .cover-contentdiv{
@@ -83,8 +83,6 @@ nav{
     height: 70vh;
     position: relative;
 }
-
-
 
 .circle{
     height:17rem;
@@ -145,6 +143,7 @@ nav{
     justify-content: center;
     align-items: center;
     margin: 4rem 0;
+    height: fit-content;
 }
 
 .objectives{
@@ -219,9 +218,8 @@ each-obj div p{
 
 .mission-category > h1, .mission-category >div>h1, .inner>div>h1{
     font-size: 4rem;
-    width: 33rem;
+    width: 60%;
 }
-
 .mission-cat-row{
     display: flex;
     flex-direction: row;
@@ -240,11 +238,14 @@ each-obj div p{
 }
 
 .mission-cat-col > .col-inner > p:first-of-type{
-    padding: 1.2rem 0 0 1.2rem;
+    padding: 0;
     width: 3.5rem;
     height: 3rem;
     border-radius: 0.3rem;
     background-color: #E2EEEC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mission-cat-col:hover{
@@ -257,28 +258,31 @@ each-obj div p{
     width: 80%;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+
 }
 
-.project-category div{
+.project-category .left-project-category{
     display: flex;
+    margin-bottom: 1rem;
+    
 }
 
-.project-category div h1{
+.project-category .left-project-category h1{
     width: 90%;
 }
 .projectside{
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
+    height: 50vh;
 }
 
 .project-left-side{
     width: 50%;
-    height: 70vh;
-    border-radius: 2rem;
-    background: url("Screenshot 2023-10-31 222840.png");
+    height: 10;
+    border-radius: 1rem;
+    background: url("istockphoto-1276543539-170667a.webp");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -290,7 +294,7 @@ each-obj div p{
 
 .project-right-side{
     width: 50%;
-    height: 70vh;
+    height: 100%;
     border-radius: 2rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -302,19 +306,27 @@ each-obj div p{
 
 .project-right-side > div{
     width: 100%;
-    height: 70vh;
+    height: 33%;
     border-radius: 2rem;
-    background: url("Screenshot 2023-10-31 222840.png");
+    /* background: url("Screenshot 2023-10-31 222840.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     position: relative;
+    border-radius: 1rem;
 }
 
-.project-left-side > img, .project-right-side > img{
+.project-left-side > img{
     object-fit: fill;
+}
+
+.project-right-side div img{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
 .project-left-side .project-details{
@@ -335,9 +347,9 @@ each-obj div p{
 .project-right-side .project-details{
     display: none;
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     background-color: #1C3A27;
-    border-radius: 0 1rem 0 1rem;
+    border-radius: 0 1rem 1rem 1rem;
     position: absolute;
     bottom: 0;
     color: #FFFFFF;
@@ -364,24 +376,26 @@ each-obj div p{
     color: #FFFFFF;
     background-color: transparent;
     border: none;
+    padding-top: 45%;
 }
 
 .action{
-    height: 70vh;
     width: 100%;
     color: white;
     background-color: #EBEBEB;
 }
 
 .action .action-inner{
-    height: 70vh;
     width: 70%;
     background-color: #1C3A27;
-    border-radius: 0 30rem 10rem 0;
+    border-radius: 0 50% 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    border-right: 25% solid transparent;
+    height: 100%;
+/*     clip-path: polygon(66% 0, 82% 44%, 100% 100%, 0 100%, 0 0);
+ */}
 
 .action-inner > div{
     width: inherit;
@@ -406,7 +420,7 @@ each-obj div p{
 }
 
 .latestblog{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,6 +435,7 @@ each-obj div p{
     display: flex;
     flex-direction: row;
     gap: 1rem;
+
 }
 
 .row .col {
@@ -476,6 +491,7 @@ footer .inner-footer{
     flex-direction: column;
     gap: 2rem;
     width: 100%;
+    height: 100%;
 }
 
 
@@ -506,4 +522,329 @@ footer .inner-footer{
 
 .footerh1{
     font-size: 1.5rem;
+}
+
+
+
+/* For min-width of 320px */
+
+@media screen 
+and (min-width: 320px) 
+and (max-width: 1023px){
+    p{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+    body{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    /*     
+        display: flex;
+        flex-direction: column;
+        gap: 45rem; */
+    }
+
+    body .cover{
+        height: 112vh;
+        width: 100%;
+        border-radius: 0 0 0 3rem;
+        background-color: #254330;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .cover-contentdiv{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: fit-content;
+    }
+  
+
+    .heroContent{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: fit-content;
+    }
+    
+
+    .cir-div{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 5vh;
+        position: relative;
+    }
+    
+    .circle{
+        height:7rem;
+        width: 7rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.5rem;
+        left: 6rem;
+    }
+    
+    .circle1{
+        height:5rem;
+        width: 5rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 2rem;
+        left: 16rem;
+    }   
+    
+    .circle2{
+        height:3rem;
+        width: 3rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 9rem;
+        left: 13rem;
+    }
+
+    .contentside{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0;
+        height: fit-content;
+    }
+    
+
+    .missions{
+        background: linear-gradient(to bottom, #E2EEEC, #E3EFED00 50%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 0 0 0;
+        height: fit-content;
+    }
+    
+
+    .missions .mission-category{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 5rem 0;
+    }
+    
+
+    .mission-category > h1, .mission-category >div>h1, .inner>div>h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+    .mission-cat-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .project-category{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+    }
+
+    .project-category .left-project-category{
+        display: flex;
+        height: 10vh;
+        
+    }
+
+    .project-category .right-project-category{
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+    } 
+
+    .projectside{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 150vh;
+    }
+
+    .project-left-side{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        background: url("Screenshot 2023-10-31 222840.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+    
+    }
+    
+    .project-right-side{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+    }
+
+    
+    .action{
+        height: 100%;
+        width: 100%;
+        color: white;
+        background-color: #EBEBEB;
+        margin-top: 10rem;
+    }
+    .action-inner h1{
+        font-size: 25px;
+    }
+
+    .latestblog .inner .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .latestblog{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #E2EEEC 1%, #E3EFED00);
+        height: fit-content;
+    }
+    
+    .latestblog .inner{
+        width: 80%;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    
+    }
+    
+    .row .col {
+        width: 100%;
+        height: 25%;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-radius: 0.5rem;
+    }
+    
+    
+    .col-inner{
+        border-radius: inherit;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .col-inner >div> img{
+        width: 100%;
+        height: 40%;
+        object-fit: fill;
+        border-radius: 0.5rem;
+        margin-bottom: 10px;
+    }
+    
+
+
+    footer{
+        height: fit-content;
+        width: 100%;
+        margin-top: 5rem;
+        background-color: #F4F9F8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer .inner-footer{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    
+    
+} 
+
+
+@media screen 
+and (min-width: 340px)
+and (max-width: 424px) {
+    .cir-div{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 5vh;
+        position: relative;
+    }
+    
+    .circle{
+        height:7rem;
+        width: 7rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.5rem;
+        left: 8rem;
+    }
+    
+    .circle1{
+        height:5rem;
+        width: 5rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 2rem;
+    }   
+    
+    .circle2{
+        height:3rem;
+        width: 3rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        position: absolute;
+        top: 9rem;
+        left: 15rem;
+    }
+}
+
+@media screen
+and (min-width: 720px)
+and (max-width: 1023px) {
+    
 }
