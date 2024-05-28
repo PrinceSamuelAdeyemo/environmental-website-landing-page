@@ -271,6 +271,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
 }
 
 .mission-cat-col .col-inner{
@@ -530,6 +531,10 @@ nav{
     font-size:1.2rem;
 }
 
+.col-inner p{
+    font-size:1rem;
+}
+
 footer{
     min-height: 50vh;
     width: 100%;
@@ -550,40 +555,47 @@ footer .inner-footer{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
+    width: 30%;
     height: 100%;
 }
 
 .inner-1 p{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .inner-1 form{
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .inner-1 form .emailinput{
     width: 100%;
-    height: 2rem;
-    line-height: 4rem;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 0.2rem;
 }
 
 .inner-2{
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 .inner-2 img{
     width: auto;
-    height: 3rem;
+    height: 2rem;
 }
 
 .footerh1{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+#submitemail{
+    width: 100%;
 }
 
 
