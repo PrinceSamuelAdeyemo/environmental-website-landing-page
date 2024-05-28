@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    text-wrap: wrap;
+    word-wrap: break-word;
  }
 
  p{
@@ -50,6 +52,7 @@ nav{
     list-style: none;
 }
 
+
 .nav-button{
     height: 40%;
     display: none;
@@ -57,8 +60,15 @@ nav{
     font-size: 5rem;
 }
 #nav-icon{
+    display: none;
     font-size: 2rem;
     transition: all 2s ease-in-out;
+}
+
+.login-button2{
+    display: none;
+    color: #000000;
+    font-weight: 600;
 }
 
 .coverh1{
@@ -230,7 +240,7 @@ nav{
     width: 80%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .mission-category > h1, .mission-category >div>h1, .inner>div>h1{
@@ -246,12 +256,21 @@ nav{
 }
 
 .mission-cat-col{
-    height: 30vh;
+    height: 100%;
     border-radius: 1rem;
     color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mission-cat-col .col-inner{
+    border-radius: inherit;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .mission-cat-col > .col-inner > p:first-of-type{
@@ -684,7 +703,7 @@ and (max-width: 1023px){
         flex-direction: column;
         align-items: center;
         padding: 5rem 0 0 0;
-        height: fit-content;
+        
     }
     
 
@@ -709,11 +728,20 @@ and (max-width: 1023px){
         margin-top: 4rem;
     }
 
+    .mission-cat-col{
+        height: 100%;
+        border-radius: 1rem;
+        color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .project-category{
         width: 80%;
         display: flex;
         flex-direction: column;
-        height: 150vh;
+        height: 100%;
     }
 
     .project-category .left-project-category{
@@ -725,7 +753,7 @@ and (max-width: 1023px){
     .project-category .right-project-category{
         display: flex;
         flex-direction: column;
-        height: 350vh;
+        height: 100%;
     } 
 
     .projectside{
@@ -733,7 +761,7 @@ and (max-width: 1023px){
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        height: 200vh;
+        height: 130vh;
     }
 
     .project-left-side{
@@ -897,6 +925,7 @@ and (max-width: 424px) {
     }
 }
 
+/* Tablet View */
 @media screen
 and (min-width: 720px)
 and (max-width: 1023px) {
@@ -905,13 +934,18 @@ and (max-width: 1023px) {
 
 @media screen
 and (max-width: 719px) {
-    .navlist-container, .login-button1{
+    .login-button1{
         display: none;
     }
 
-    .nav-button{
+    #nav-icon{
         display: block;
-        width: 10%;
+        font-size: 2rem;
+        transition: all 2s ease-in-out;
+    }
+
+    .navlist-container{
+        display: none;
     }
 
     .navlist-subcontainer{
