@@ -30,6 +30,7 @@ body .cover{
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    position: relative;
 }
 
 nav{
@@ -42,11 +43,22 @@ nav{
     gap: 20px ;
     width: 80%  ;
 }
-.navlist_container{
+.navlist-subcontainer{
     display: flex;
     align-items: center;
     gap: 30px;
     list-style: none;
+}
+
+.nav-button{
+    height: 40%;
+    display: none;
+    transition: all 2s ease-in-out;
+    font-size: 5rem;
+}
+#nav-icon{
+    font-size: 2rem;
+    transition: all 2s ease-in-out;
 }
 
 .coverh1{
@@ -156,7 +168,7 @@ nav{
 .contentside .objectives .each-obj{
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: fit-content;
     justify-content: space-between;
     width: 100%;
 }
@@ -183,8 +195,8 @@ nav{
     line-height: 20vh;
 }
 
-each-obj div p{
-    font-size: 10rem;
+.each-obj div p{
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -192,10 +204,15 @@ each-obj div p{
     color: #53C351;
 }
 
-.each-obj img{
-    height: 50vh;
+.each-obj div{
     width: 100%;
-    object-fit: cover;
+    height: 40vh;
+}
+
+.each-obj div img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 
@@ -288,8 +305,7 @@ each-obj div p{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    position: relative;
-
+    justify-content: flex-end;
 }
 
 .project-right-side{
@@ -335,7 +351,6 @@ each-obj div p{
     height: 20vh;
     background-color: #1C3A27;
     border-radius: 0 1rem 0 1rem;
-    position: absolute;
     bottom: 0;
     color: #FFFFFF;
 }
@@ -368,6 +383,8 @@ each-obj div p{
 }
 .project-details>div:nth-of-type(2){
     width: 5%;
+    display: flex;
+    justify-self: center;
 }
 
 .project-details>div:nth-of-type(2) button{
@@ -383,6 +400,7 @@ each-obj div p{
     width: 100%;
     color: white;
     background-color: #EBEBEB;
+    height: 80vh;
 }
 
 .action .action-inner{
@@ -402,7 +420,7 @@ each-obj div p{
     height: 50%;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
 }
 
 .action-inner > div >div{
@@ -440,7 +458,6 @@ each-obj div p{
 
 .row .col {
     width: 100%;
-    height: 25%;
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -453,17 +470,23 @@ each-obj div p{
 .col-inner{
     border-radius: inherit;
     width: 90%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.col-inner >div> img{
+.col .col-inner >div{
     width: 100%;
-    height: 40%;
-    object-fit: fill;
+    height: 80%;
+}
+
+.col .col-inner >div> img{
+    width: 100%;
+    height: 80%;
     border-radius: 0.5rem;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .col-inner h1{
@@ -471,7 +494,7 @@ each-obj div p{
 }
 
 footer{
-    height: 50vh;
+    min-height: 50vh;
     width: 100%;
     margin-top: 5rem;
     background-color: #F4F9F8;
@@ -627,6 +650,31 @@ and (max-width: 1023px){
         margin: 4rem 0;
         height: fit-content;
     }
+
+    
+    .each-obj .eachobj-section{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .eachobj-section div:first-of-type{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .eachobj-section div:first-of-type > h1{
+        font-size: 2em;
+    }
+
+    .each-obj > .eachobj-section>p{
+        font-size: 10rem;
+        font-weight: 600;
+        color: #E6E6E6;
+        line-height: 20vh;
+    }
+
     
 
     .missions{
@@ -677,7 +725,7 @@ and (max-width: 1023px){
     .project-category .right-project-category{
         display: flex;
         flex-direction: column;
-        height: 150vh;
+        height: 350vh;
     } 
 
     .projectside{
@@ -685,14 +733,13 @@ and (max-width: 1023px){
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        height: 150vh;
+        height: 200vh;
     }
 
     .project-left-side{
         width: 100%;
         height: 100%;
         border-radius: 2rem;
-        background: url("Screenshot 2023-10-31 222840.png");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -721,6 +768,13 @@ and (max-width: 1023px){
         color: white;
         background-color: #EBEBEB;
         margin-top: 10rem;
+    }
+
+    .action-inner > div{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
     .action-inner h1{
         font-size: 25px;
@@ -846,5 +900,42 @@ and (max-width: 424px) {
 @media screen
 and (min-width: 720px)
 and (max-width: 1023px) {
+    
+}
+
+@media screen
+and (max-width: 719px) {
+    .navlist-container, .login-button1{
+        display: none;
+    }
+
+    .nav-button{
+        display: block;
+        width: 10%;
+    }
+
+    .navlist-subcontainer{
+        color: #000000;
+        background-color: #FFFFFF;
+        opacity: 0.9;
+        width: 100%;
+        height: 50vh;
+        position: absolute;
+        top: 7%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-top: 1rem;
+        list-style: none;
+        font-weight: 600;
+    }
+
+    .login-button2{
+        display: block;
+        color: #000000;
+        font-weight: 600;
+    }
     
 }
