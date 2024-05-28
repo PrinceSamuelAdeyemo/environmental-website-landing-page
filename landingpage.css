@@ -23,7 +23,7 @@ body{
 }
 
 body .cover{
-    min-height: 50vh;
+    height: 90vh;
     width: 100%;
     border-radius: 0 0 0 3rem;
     background-color: #254330;
@@ -181,6 +181,8 @@ nav{
     min-height: fit-content;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 6rem;
+    gap: 2rem;
 }
 
 .each-obj .eachobj-section{
@@ -191,11 +193,12 @@ nav{
 .eachobj-section div:first-of-type{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .eachobj-section div:first-of-type > h1{
-    font-size: 3em;
+    font-size: 4em;
+    width: 90%;
 }
 
 .each-obj > .eachobj-section>p{
@@ -212,17 +215,22 @@ nav{
 
 .readmore{
     color: #53C351;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.each-obj div{
+.each-obj > .eachobj-image{
     width: 100%;
     height: 40vh;
+    border-radius: 1rem;
 }
 
-.each-obj div img{
-    height: 100%;
+.each-obj .eachobj-image img{
     width: 100%;
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100%;
+    border-radius: 1rem;
 }
 
 
@@ -241,6 +249,7 @@ nav{
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 6rem;
 }
 
 .mission-category > h1, .mission-category >div>h1, .inner>div>h1{
@@ -306,17 +315,22 @@ nav{
 .project-category .left-project-category h1{
     width: 90%;
 }
-.projectside{
+
+.project-category .right-project-category{
+    
+}
+
+.right-project-category .projectside{
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    height: 50vh;
+    height: 100vh;
 }
 
-.project-left-side{
-    width: 50%;
-    height: 10;
+.projectside .project-left-side{
+    width: 100%;
+    height: 100vh;
     border-radius: 1rem;
     background: url("istockphoto-1276543539-170667a.webp");
     background-size: cover;
@@ -325,11 +339,11 @@ nav{
     flex-direction: column;
     gap: 1rem;
     justify-content: flex-end;
+    
 }
 
 .project-right-side{
     width: 50%;
-    height: 100%;
     border-radius: 2rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -337,11 +351,12 @@ nav{
     flex-direction: column;
     gap: 1rem;
     position: relative;
+    height: 100%;
 }
 
 .project-right-side > div{
     width: 100%;
-    height: 33%;
+    height: 32.1%;
     border-radius: 2rem;
     /* background: url("Screenshot 2023-10-31 222840.png"); */
     background-size: cover;
@@ -362,6 +377,7 @@ nav{
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
+    object-position: 100%;
 }
 
 .project-left-side .project-details{
@@ -382,6 +398,7 @@ nav{
     display: none;
     width: 100%;
     height: 15vh;
+    padding: 0 2rem;
     background-color: #1C3A27;
     border-radius: 0 1rem 1rem 1rem;
     position: absolute;
@@ -398,8 +415,9 @@ nav{
     width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
+
 .project-details>div:nth-of-type(2){
     width: 5%;
     display: flex;
@@ -536,7 +554,9 @@ footer .inner-footer{
     height: 100%;
 }
 
-
+.inner-1 p{
+    font-size: 1rem;
+}
 
 .inner-1 form{
     display: flex;
@@ -747,7 +767,6 @@ and (max-width: 1023px){
     .project-category .left-project-category{
         display: flex;
         height: 10vh;
-        
     }
 
     .project-category .right-project-category{
@@ -756,17 +775,16 @@ and (max-width: 1023px){
         height: 100%;
     } 
 
-    .projectside{
+    .right-project-category .projectside{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        height: 130vh;
+        height: fit-content;
     }
 
     .project-left-side{
         width: 100%;
-        height: 100%;
         border-radius: 2rem;
         background-size: cover;
         background-repeat: no-repeat;
@@ -774,7 +792,7 @@ and (max-width: 1023px){
         flex-direction: column;
         gap: 1rem;
         position: relative;
-    
+        height: 100vh;
     }
     
     .project-right-side{
@@ -787,6 +805,16 @@ and (max-width: 1023px){
         flex-direction: column;
         gap: 1rem;
         position: relative;
+    }
+
+    .project-right-side div .project-details div p{
+        font-size: 1rem;
+    }
+
+    .project-right-side div .project-details div h1{
+        width: 85%;
+        height: 100%;
+        font-size: 2rem;
     }
 
     
