@@ -73,7 +73,7 @@ nav{
 
 .coverh1{
     font-family: "Inter", sans-serif;
-    font-size: 32px;
+    font-size: 50px;
 }
 
 .cover-contentdiv{
@@ -136,7 +136,7 @@ nav{
     left: 35%;
 }
 
-.cover-contentdiv div:first-of-type h1, .action-inner h1{
+.action-inner h1{
     font-size: 50px;
 }
 
@@ -327,10 +327,7 @@ nav{
 
 .projectside .project-left-side{
     width: 100%;
-    /* height: 32.1%; */
-    height: 100%;
     border-radius: 2rem;
-    /* background: url("Screenshot 2023-10-31 222840.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -338,18 +335,6 @@ nav{
     gap: 1rem;
     position: relative;
     border-radius: 1rem;
-    /* 
-    width: 100%;
-    height: 100vh;
-    border-radius: 1rem;
-    /* background: url("istockphoto-1276543539-170667a.webp"); *
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: flex-end;
-     */
 }
 
 .project-left-side > img{
@@ -359,7 +344,6 @@ nav{
     border-radius: inherit;
     object-position: 100%;
 }
-
 
 .project-left-side .project-details{
     display: none;
@@ -377,7 +361,6 @@ nav{
     flex-direction: row;
 }
 
-
 .project-right-side{
     width: 50%;
     border-radius: 2rem;
@@ -387,7 +370,6 @@ nav{
     flex-direction: column;
     gap: 1rem;
     position: relative;
-    height: 100%;
 }
 
 .project-right-side > div{
@@ -427,7 +409,7 @@ nav{
     display: none;
     width: 100%;
     height: 15vh;
-    padding: 0 2rem;
+    padding: 2rem;
     background-color: #1C3A27;
     border-radius: 0 1rem 1rem 1rem;
     position: absolute;
@@ -693,6 +675,11 @@ and (max-width: 1023px){
         gap: 1rem;
         margin-top: 1rem;
     }
+
+    .heroContent .coverh1{
+        font-family: "Inter", sans-serif;
+        font-size: 2.7rem;
+    }
     
     .cir-div, .circle, .circle1, .circle2{
         display: none;
@@ -843,7 +830,6 @@ and (max-width: 1023px){
     }
 
     .project-left-side{
-        height: 700vh;
         width: 100%;
         border-radius: 2rem;
         background-size: cover;
@@ -1082,7 +1068,7 @@ and (max-width: 719px) {
         width: 100%;
         height: 50vh;
         position: absolute;
-        top: 7%;
+        top: 13%;
         left: 0;
         display: flex;
         flex-direction: column;
